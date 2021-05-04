@@ -1,22 +1,8 @@
 # Memory Game
-A retro grid-based game in vanilla JavaScript, HTML and CSS
-
-View the full walkthrough [here](https://www.youtube.com/channel/UC5DNytAJ6_FISueUfzZCVsw) 
+A retro grid-based game in JavaScript, HTML and CSS. 
+Refactored with some OPP and redesigned from [kubowania/memory-game](https://github.com/kubowania/memory-game) 
 
 Memory Game, also known as the Concentration card game or Matching Game, is a simple card game where you need to match pairs by turn over 2 cards at a time. There are so many versions of it it is hard to in down it's exact origin. There are claims that the famuos writer of Huckleberry Finn, Mark Twain invented his own version. I googled it and whatever it is, it looks more like a way of trying to figure out how much tax you owe rather than match cards.
-
-In this repo, I will be putting extra focus on setting Attributes in JavaScript. If you want to learn how to use setAttritube and getAttribute effectively, please have a look at my code.
-
-I have kept the styling at a bare miniumum for you to go wild and make it your own. Please tag me as I would LOVE to see your game!!!
-
-## What inbuilt functions are we going to focus on?
-- for loops
-- addEventListener
-- setAttribute
-- getAttribute
-- data-name
-- document.querySelector
-- createElement
 
 ## Rules of Memory Game
 - You will start by flipping over one card
@@ -28,6 +14,7 @@ I have kept the styling at a bare miniumum for you to go wild and make it your o
 ### MIT Licence
 
 Copyright (c) 2020 Ania Kubow
+Copyright (c) 2021 José Luis Terroba
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
