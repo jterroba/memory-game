@@ -1,7 +1,22 @@
+.content{
+    width: 50%;
+    margin: auto;
+}
+
 .grid {
     display: flex;
-    flex-wrap: wrap;
-    width: 400px;
-    height: 300px;
-    margin: auto;
+    flex-wrap: wrap;    
+    margin: auto;   
+}
+
+.row4{
+    width: 400px;    
+}
+
+.row5{
+    width: 500px;    
+}
+
+.hide{
+    display: none;
 }

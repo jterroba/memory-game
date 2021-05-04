@@ -1,9 +1,23 @@
-document.addEventListener('DOMContentLoaded', () => {  
-      let game = new MemoryGame();
-      const cards = document.querySelectorAll('img');
+document.addEventListener('DOMContentLoaded', () => {        
+      document.querySelectorAll('.options-size').forEach(function(item) {
+            item.addEventListener('click', function() {               
+                const size = item.getAttribute('game-size');
+                startGame(size);
+            });
+      });
+});
 
-      for (let i = 0; i < game.cardsDeck.length; i++) {
-            let card = cards[i];
+function startGame(size)
+{
+      //hide/show game divs
+      document.getElementById('intro').setAttribute("style","display:none");
+      document.getElementById('game').setAttribute("style","display:block");
+
+      //start game
+      let game = new MemoryGame(size);
+
+      //attach events to cards
+      document.querySelectorAll('img').forEach(function(card) {
             card.addEventListener('click', function clickCard() {
                   let cardId = card.getAttribute('data-id');
                   game.setSelectedCard(cardId);                
@@ -13,7 +27,6 @@ document.addEventListener('DOMContentLoaded', () => {
                         game.updateScore();
                         game.controlFinishGame();
                       }, 500); 
-                                               
             });
-      }
-});
+      });
+}

@@ -11,8 +11,22 @@
 </head>
 <body>
 
-  <h3>Score:<span id="result"></span></h3>
-  <div class="grid">
+  <div  class='content'>  
+    <h2>Memory Game</h3>
+  </div>  
+  <div id='intro' class='content'>
+    Select game's size: <p></p>
+    <button class='options-size'  game-size='8'>16 cards</button> 
+    <button class='options-size'  game-size='10'>20 cards</button> 
+    <button class='options-size'  game-size='12'>24 cards</button> 
+  </div>
+
+  <div id='game' class='content hide'>  
+    <div>
+      <h3>Score:<span id="result"></span></h3>
+    </div>
+    <div id='gridgame' class="grid row4">
+    </div>
   </div>
 
 </body>
