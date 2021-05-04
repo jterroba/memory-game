@@ -8,17 +8,22 @@
 
 var MemoryGame = class {
 
-    constructor() 
+    constructor(size) 
     {   
         this.cardsChosen = [];
         this.cardsChosenId = [];
         this.cardsWon = []; 
         this.selectedCard = {id: null, name: null, img: null}
+        this.maxCards = size;
         this.resultDisplay = document.querySelector('#result');
         this.grid = document.querySelector('.grid');
         this.cardsDeck = this.createCardsFromDeck();
-                
         this.createBoard();
+
+        if(this.maxCards > NORMAL_SIZE){
+            document.getElementById('gridgame').classList.remove(CLASS_ROW_NORMAL);
+            document.getElementById('gridgame').classList.add(CLASS_ROW_XL);
+        }
     }
     
     /**
@@ -27,11 +32,10 @@ var MemoryGame = class {
      */
     createCardsFromDeck()
     {
-        const maxCards = 8;
         let prepareCards = cardsDeckConfig;
         //select cards randomly
         prepareCards.sort(() => 0.5 - Math.random());
-        prepareCards = prepareCards.slice(0, maxCards );
+        prepareCards = prepareCards.slice(0, this.maxCards);
       
         //duplicate cards and random
         let prepareCardsCopy = prepareCards.slice();
