@@ -27,7 +27,7 @@ var MemoryGame = class {
      */
     createCardsFromDeck()
     {
-        const maxCards = 2;
+        const maxCards = 8;
         let prepareCards = cardsDeckConfig;
         //select cards randomly
         prepareCards.sort(() => 0.5 - Math.random());
